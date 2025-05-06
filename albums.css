@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Charmonman:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@font-face {
+    font-family: 'Archive';
+    src: url('fonts/Archive-Regular-ttf.ttf');
+}
+@font-face {
+    font-family: 'Brasika';
+    src: url('fonts/brasika-display-ttf.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Publica Slab";
+    src: url("fonts/publica\ slab\ ttf.ttf");
+}
+@font-face {
+    font-family: "Choplin Black";
+    src: url("fonts/Choplin\ Black\ Italic.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #1C1C1C;
+    overflow: hidden;
+}
+.albums-wrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #1C1C1C;
+    display: flex;
+}
+.section1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.chromakopia-container{
+    height: 60%;
+    width: 96%;
+    border-radius: 10px;
+    background-color: #01823F;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition:  background-color 0.3s ease-in-out;
+
+    &:hover{
+        background-color: black;
+    }
+}   
+.chromakopia-container:hover #chromaImg{
+    scale: 1.03;
+    filter: none;
+}
+.chromakopia-container:hover #mountain-svg{
+    fill: #01823F;
+    stroke: #01823F;
+}
+.chromakopia-container:hover .mountain-svg2{
+    fill: #01823F;
+    stroke: #01823F;
+}
+.chromakopia-container:hover .new-H2s{
+    color: black;
+}
+.chromakopia-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 3vw;
+    z-index: 6;
+    position: absolute;
+    transition: scale 0.3s ease-in-out;
+    filter: drop-shadow(1px 1px 20px rgba(35, 34, 34, 0.692)) drop-shadow(1px 1px 20px rgba(14, 202, 105, 0.387));
+}
+.chromakopia-container #chroma{
+   width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -30%;
+    z-index: 1;
+    left: -5%;
+    filter: none;
+}
+.chromakopia-container h1{
+    z-index: 5;
+    position: absolute;
+    color: #01823F;
+    mix-blend-mode: difference;
+    font-size: 6.5vw;
+    letter-spacing: 0.5vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    left: 50%;
+    translate: -50%;
+    top: 7%;
+}
+.chromakopia-container h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.7vw;
+    color: #01823F;
+    height: 1.5vw;
+    z-index: 5;
+    font-weight: 400;
+    /* position: absolute; */
+    transition: color 0.3s ease-in-out;
+}
+.chromakopia-container .new-container{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+#mountain-svg{
+    scale: 1.2;
+    z-index: 4;
+    bottom: -10%;
+    position: absolute;
+    fill: black;
+    stroke: black;
+}
+.mountain-svg2{
+    top: -5%;
+    rotate: 180deg;
+    fill:black;
+    stroke: black;
+}
+.igor-container{
+    height: 34%;
+    width: 96%;
+    border-radius: 10px;
+    background-color: #F4B4C6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.igor-container:hover {
+    box-shadow: inset 0 0 20px black;
+}
+.igor-container:hover #igor-img2{
+    scale: 1.03;
+    
+}
+.igor-title{
+    font-size: 8vw;
+    font-family: "Choplin Black",Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    /* opacity: 0.8; */
+    z-index: 8;
+    /* mix-blend-mode:difference; */
+    margin-left: 3vw;
+    text-shadow: -3px 3px 0px #322f2f;
+}
+#igor-img1{
+    height: 40vh;
+    transform: rotateY(180deg);
+    object-fit: cover;
+    left: 0%;
+    position: absolute;
+    /* filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.029)) drop-shadow(0 0 50px gray); */
+    display: none;
+}
+
+#igor-img2{
+    height: 150%;
+    transition: scale 0.5s ease-in-out;
+    /* width:%; */
+    object-fit: cover;
+    position: absolute;
+    z-index: 7;
+    right: -10%;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        white 40% 90%,
+        transparent
+    );
+    /* top: ; */
+    border: 3px solid black;
+    /* background-color: rgb(176, 169, 169); */
+    filter: drop-shadow(0px 0px 90px rgba(111, 93, 93, 0.484)) drop-shadow(0 0 50px rgba(123, 112, 119, 0.773)) blur(0px) grayscale(100);
+    /* clip-path: polygon(20% 0%, 0 0, 30% 50%, 0 100%, 20% 100%, 62% 100%, 100% 100%, 100% 80%, 100% 53%, 100% 0, 81% 0, 56% 0); */
+    
+}  
+#igor-svg1{
+    height: 20vh;
+    position: absolute;
+    right: 0;
+    display: none;
+} 
+.igor-text{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    /* left: 10%; */
+    mix-blend-mode: normal;
+    color: rgba(174, 141, 141, 0.879);
+    /* text-transform: capitalize; */
+    font-size: 1.5vw;
+}
+.section2{
+    height: 100%;
+    width: 50%;
+    display: grid;
+    gap: 1vw;
+    padding: 1% 1% 1% 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.other-albums-container{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.other-albums-container:hover{
+    box-shadow: 3px 3px 1px #875353;
+}
+.other-albums-container:hover #other-albums-coverImg{
+    scale: 1.05;
+}
+.other-albums-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+    transition: scale 0.45s ease-in-out;
+}
+.other-albums-container span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3vw;
+    font-family: "Archive",monospace;
+    color: rgb(255, 182, 182);
+    mix-blend-mode: difference;
+    text-wrap: nowrap;
+}
+#cmiygl-albumTitle{
+    font-size: 1.7vw;
+    width: 50%;
+    text-wrap: wrap;
+    text-align: center;
+}
+
+.invisible-album-title{
+    display: none;
+}
+
+.visit-album-fs{
+    position: absolute;
+    background-color: #875353;
+    height: 0vw;
+    width: 32.5vw;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 7px;
+    color: #3A2828;
+    box-shadow: 5px 5px 1px #3A2828;
+    overflow: hidden;
+}   
+#vaFsCloseBtn{
+    font-size: 1.5vw;
+    font-weight: 600;
+    margin-right: 0.5vw;
+    cursor: pointer;
+}
+.visit-album-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15%;
+    width: 100%;
+    opacity: 0;
+    border-bottom: 3px solid #3A2828;
+}
+.visit-album-header h2{
+    font-family: "Archive";
+    font-size: 1.3vw;
+    margin-left: 0.5vw;
+}
+.visit-album-main{
+    /* background-color: black; */
+    height: 85%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+.visit-album-links{
+    height: 7vw;
+    width: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3A2828;
+    border-radius: 7px;
+    opacity: 0;
+    position: relative;
+    top: 0.3vw;
+}
+.visit-album-links svg{
+    height: 2.5vw;
+    fill: white;
+}
