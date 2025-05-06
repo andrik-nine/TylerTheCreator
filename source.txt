@@ -1,3 +1,0 @@
-font-family: "Publica Slab",sans-serif;
-
-scene-2 and scene2-img1 delay - 3.42s
